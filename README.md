@@ -1,8 +1,8 @@
-Auction Slot Drain PoC
+## Auction Slot Drain PoC
 
 This repository contains a proof-of-concept (PoC) demonstrating a storage slot drainage vulnerability in auction-style smart contracts, where improper state isolation and bid lifecycle management can lead to unintended value extraction or state corruption.
 
-Overview
+## Overview
 
 The PoC simulates an on-chain auction mechanism where bids are tracked via storage slots. Due to flawed accounting and improper cleanup of bid state, an attacker can manipulate the system to:
 
@@ -13,7 +13,7 @@ Influence settlement logic in edge-case conditions
 
 This is primarily a security research and educational project intended to highlight how subtle storage and lifecycle mistakes in Solidity-based auction systems can lead to exploitable behaviour.
 
-Key Issue Demonstrated
+## Key Issue Demonstrated
 
 The vulnerability stems from a combination of:
 
@@ -24,7 +24,7 @@ Assumptions that off-chain or front-end state reflects on-chain truth
 
 These conditions can result in storage slot collision or “drain” scenarios, where contract state becomes inconsistent or economically exploitable.
 
-Impact
+## Impact
 
 Depending on implementation, this class of bug can lead to:
 
